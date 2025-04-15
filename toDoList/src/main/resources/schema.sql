@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS nueva_tarea (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descripcion TEXT NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    borrado_logico BOOLEAN DEFAULT FALSE
+);

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gestión de Tareas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+<div class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
+    <h1 class="text-2xl font-bold mb-4 text-center">Crear Nueva Tarea</h1>
+
+    <form id="formTarea" class="space-y-4 mb-6">
+        <input type="text" id="titulo" placeholder="Título" class="w-full p-2 border rounded" required>
+        <textarea id="descripcion" placeholder="Descripción" class="w-full p-2 border rounded" required></textarea>
+
+        <select id="status" class="w-full p-2 border rounded" required>
+            <option value="">Seleccionar estado</option>
+            <option value="PENDIENTE">Pendiente</option>
+            <option value="EN_PROGRESO">En Progreso</option>
+            <option value="COMPLETADA">Completada</option>
+        </select>
+
+        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+            Guardar Tarea
+        </button>
+    </form>
+
+    <a href="listado.html" class="text-center block text-blue-600 hover:underline">Ver lista de tareas</a>
+</div>
+
+<script type="module" src="./js/formulario.js"></script>
+</body>
+</html>

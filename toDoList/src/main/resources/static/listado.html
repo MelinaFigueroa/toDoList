@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado de Tareas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<div class="max-w-4xl mx-auto py-6 px-4">
+    <div class="flex justify-between items-center mb-4">
+        <h1 class="text-2xl font-bold">Listado de Tareas</h1>
+        <a href="formulario.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded inline-flex items-center">
+            <i class="fas fa-plus mr-2"></i> Nueva Tarea
+        </a>
+    </div>
+
+    <div class="mb-4">
+        <input id="busquedaTitulo" type="text" placeholder="Buscar por título..."
+               class="w-full p-2 border border-gray-300 rounded">
+    </div>
+
+    <div class="overflow-x-auto">
+        <table class="min-w-full bg-white rounded shadow">
+            <thead class="bg-gray-800 text-white">
+            <tr>
+                <th class="px-4 py-2 text-left">Título</th>
+                <th class="px-4 py-2 text-left">Estado</th>
+                <th class="px-4 py-2 text-left">Acciones</th>
+            </tr>
+            </thead>
+            <tbody id="tablaTareas" class="divide-y divide-gray-200">
+            <!-- JS renderiza las tareas acá -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="./js/listado.js"></script>
+</body>
+</html>
